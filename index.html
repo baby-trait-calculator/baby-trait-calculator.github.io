@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>Baby Trait Calculator</title>
+  <link href="index.css" rel="stylesheet" type="text/css" />
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+</head>
+
+<body>
+  <div class="container">
+  <h1>Baby Trait Calculator</h1>
+  <div class="data-container">
+    <div class="row g-3">
+      <div class="col-md-6">
+        <label for="concievment_age">Concievement Age:</label>
+        <input class="form-control" id="concievment_age" name="concievment_age">
+      </div>
+      <div class="col-md-6">
+        <label for="concievment_month">Concievement Month:</label>
+        <select class="form-select form-control" name="concievment_month" id="concievment_month">
+        <option value="january">January</option>
+        <option value="february">February</option>
+        <option value="march">March</option>
+        <option value="april">April</option>
+        <option value="may">May</option>
+        <option value="june">June</option>
+        <option value="july">July</option>
+        <option value="august">August</option>
+        <option value="september">September</option>
+        <option value="october">October</option>
+        <option value="november">November</option>
+        <option value="december">December</option>
+        </select>
+      </div>
+    </div>
+    <br><br>
+    <div class="mother-traits">
+      <h3>Mother's traits</h3>
+      <div class="row g-3">
+        <div class="col-md-6">
+          <label for="hair_color_mother">Hair Color:</label>
+          <select class="form-select" name="hair_color_mother" id="hair_color_mother">
+            <option value="brown">Brown</option>
+            <option value="black">Black</option>
+            <option value="blonde">Blonde</option>
+            <option value="red">Red</option>
+          </select>
+        </div>
+        <div class="col-md-6">
+          <label for="eye_color_mother">Eye Color:</label>
+          <select class="form-select" name="eye_color_mother" id="eye_color_mother">
+            <option value="brown">Brown</option>
+            <option value="blue">Blue</option>
+            <option value="green">Green</option>
+          </select>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-6">
+          <label for="dominant_hand_mother">Dominant Hand:</label>
+          <select class="form-select" name="dominant_hand_mother" id="dominant_hand_mother">
+            <option value="right">Right</option>
+            <option value="left">Left</option>
+          </select>
+        </div>
+        <div class="col-md-6">
+          <label for="hair_type_mother">Hair Type:</label>
+          <select class="form-select" name="hair_type_mother" id="hair_type_mother">
+            <option value="curly">Curly</option>
+            <option value="wavy">Wavy</option>
+            <option value="straight">Straight</option>
+          </select>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-12">
+          <label for="chin_type_mother">Chin Type:</label>
+          <select class="form-select" name="chin_type_mother" id="chin_type_mother">
+            <option value="smooth">Smooth</option>
+            <option value="cleft">Cleft</option>
+          </select>
+          <small>Note: Cleft chins will have an indent.</small>
+        </div>
+      </div>
+      <div class="form-check form-switch">
+        <input class="form-check-input" type="checkbox" value="" id="dimples-mother">
+        <label class="form-check-label" for="dimples-mother">
+          Dimples
+        </label>
+      </div>
+      <div class="form-check form-switch">
+        <input class="form-check-input" type="checkbox" value="" id="freckles-mother">
+        <label class="form-check-label" for="freckles-mother">
+          Freckles
+        </label>
+      </div>
+    </div>
+    <br><br>
+    <div class="father-traits">
+      <h3>Father's traits</h3>
+      <div class="row">
+        <div class="col-md-6">
+          <label for="hair_color_father">Hair Color:</label>
+          <select class="form-select" name="hair_color_father" id="hair_color_father">
+            <option value="brown">Brown</option>
+            <option value="black">Black</option>
+            <option value="blonde">Blonde</option>
+            <option value="red">Red</option>
+          </select>
+        </div>
+        <div class="col-md-6">
+          <label for="eye_color_father">Eye Color:</label>
+          <select class="form-select" name="eye_color_father" id="eye_color_father">
+            <option value="brown">Brown</option>
+            <option value="blue">Blue</option>
+            <option value="green">Green</option>
+          </select>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-6">
+          <label for="dominant_hand_father">Dominant Hand:</label>
+          <select class="form-select" name="dominant_hand_father" id="dominant_hand_father">
+            <option value="right">Right</option>
+            <option value="left">Left</option>
+          </select>
+        </div>
+        <div class="col-md-6">
+          <label for="hair_type_father">Hair Type:</label>
+          <select class="form-select" name="hair_type_father" id="hair_type_father">
+            <option value="curly">Curly</option>
+            <option value="wavy">Wavy</option>
+            <option value="straight">Straight</option>
+          </select>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-12">
+          <label for="chin_type_father">Chin Type:</label>
+          <select class="form-select" name="chin_type_father" id="chin_type_father">
+            <option value="smooth">Smooth</option>
+            <option value="cleft">Cleft</option>
+          </select>
+          <small>Note: Cleft chins will have an indent.</small>
+        </div>
+      </div>
+      <div class="form-check form-switch">
+        <input class="form-check-input" type="checkbox" value="" id="dimples-father">
+        <label class="form-check-label" for="dimples-mother">
+          Dimples
+        </label>
+      </div>
+      <div class="form-check form-switch">
+        <input class="form-check-input" type="checkbox" value="" id="freckles-father">
+        <label class="form-check-label" for="freckles-father">
+          Freckles
+        </label>
+      </div>
+    <br>
+    <button class="btn btn-primary" id="calculate">Calculate</button>
+  </div>
+  </div>
+  <div class="response-container hidden">
+    <h3>Results</h3>
+  </div>
+  <script src="main.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
+</body>
+
+</html>
